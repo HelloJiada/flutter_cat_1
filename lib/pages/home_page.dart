@@ -15,10 +15,10 @@ class HomePage extends StatelessWidget {
         floatingActionButton: FloatingActionButton(
           onPressed: () => Navigator.push(context, MaterialPageRoute(
             builder: (context) {
-              return CartPage();
+              return const CartPage();
             })),
           backgroundColor: Colors.black,
-          child: Icon(
+          child: const Icon(
             Icons.shopping_bag,
           ),
         ),
@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 48,
               ),
               Padding(
@@ -40,11 +40,11 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 4,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 24),
+                padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Text(
                   "Let's order a cute kitten for you",
                   textAlign: TextAlign.left,
@@ -57,11 +57,11 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 height: 24,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24),
                 child: Divider(),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
               Padding(
@@ -77,7 +77,7 @@ class HomePage extends StatelessWidget {
                 child: Consumer<CarModel>(builder: (context, value, child) {
                   return GridView.builder(
                       itemCount: value.shopItems.length,
-                      padding: EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(12),
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 2, childAspectRatio: 1 / 1.2),

@@ -12,13 +12,13 @@ class CartPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        iconTheme: IconThemeData.fallback(),
+        iconTheme: const IconThemeData.fallback(),
       ),
       body: Consumer<CarModel>(builder: (context, value, child) {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(padding: EdgeInsets.symmetric(horizontal: 24.0),
+            Padding(padding: const EdgeInsets.symmetric(horizontal: 24.0),
             child: Text("My Cart",style: GoogleFonts.notoSerif(fontSize: 35,fontWeight: FontWeight.bold),),),
             Expanded(
               child: ListView.builder(
@@ -38,12 +38,13 @@ class CartPage extends StatelessWidget {
                           height: 36,
                         ),
                         title: Text(value.shopItems[index][0]),
+                        // ignore: prefer_interpolation_to_compose_strings
                         subtitle: Text('\$' + value.shopItems[index][1]),
                         trailing: IconButton(
                             onPressed: () =>
                                 Provider.of<CarModel>(context, listen: false)
                                     .removeItemFromCart(index),
-                            icon: Icon(Icons.cancel)),
+                            icon: const Icon(Icons.cancel)),
                       ),
                     ),
                   );
@@ -57,7 +58,7 @@ class CartPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                   color: Colors.green,
                 ),
-                padding: EdgeInsets.all(24),
+                padding: const EdgeInsets.all(24),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -68,11 +69,11 @@ class CartPage extends StatelessWidget {
                           'Total Price',
                           style: GoogleFonts.notoSerif(color: Colors.white70),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 4,
                         ),
                         Text(
-                          '\$' + value.clculateTotal(),
+                          '\$${value.clculateTotal()}',
                           style: GoogleFonts.notoSerif(color: Colors.white),
                         ),
                       ],
@@ -82,13 +83,13 @@ class CartPage extends StatelessWidget {
                         border: Border.all(color: Colors.green.shade200),
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      padding: EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(12),
                       child: Row(children: [
                         Text(
                           'PAY',
                           style: GoogleFonts.notoSerif(color: Colors.white),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.arrow_forward_ios,
                           size: 16,
                           color: Colors.white,
