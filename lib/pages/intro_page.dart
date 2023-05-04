@@ -17,7 +17,7 @@ class IntroPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              'We deliver groceries at your doorstep',
+              '我们送货上门',
               textAlign: TextAlign.center,
               style: GoogleFonts.notoSerif(
                 fontSize: 36,
@@ -26,7 +26,7 @@ class IntroPage extends StatelessWidget {
             ),
           ),
           Text(
-            "Every day there's a different Kitty",
+            "每天都有不同的小猫咪",
             style: GoogleFonts.notoSerif(
               color: Colors.grey[600],
             ),
@@ -43,7 +43,7 @@ class IntroPage extends StatelessWidget {
               ),
               padding: const EdgeInsets.all(24),
               child: Text(
-                "Let's get started",
+                "让我们开始吧",
                 style: GoogleFonts.notoSerif(color: Colors.white),
               ),
             ),
